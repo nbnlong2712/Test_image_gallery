@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_image"
+        android:icon="@drawable/ic_baseline_image_24"
+        android:title="Image"/>
+    <item
+        android:id="@+id/navigation_anh"
+        android:icon="@drawable/ic_baseline_today_24"
+        android:title="Ảnh"/>
+    <item
+        android:id="@+id/navigation_video"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:title="Video"/>
+    <item
+        android:id="@+id/navigation_album"
+        android:icon="@drawable/ic_baseline_photo_album_24"
+        android:title="Album"/>
+    <item
+        android:id="@+id/navigation_nguoi"
+        android:icon="@drawable/ic_baseline_face_24"
+        android:title="Người"/>
+</menu>

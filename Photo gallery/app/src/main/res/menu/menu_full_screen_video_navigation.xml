@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_copy"
+        android:icon="@drawable/ic_baseline_content_copy_24"
+        android:title="Copy"/>
+    <item
+        android:id="@+id/navigation_favourite"
+        android:icon="@drawable/ic_baseline_favorite_border_24"
+        android:title="Favourite"/>
+    <item
+        android:id="@+id/navigation_delete"
+        android:icon="@drawable/ic_baseline_delete_forever_24"
+        android:title="Delete"/>
+</menu>

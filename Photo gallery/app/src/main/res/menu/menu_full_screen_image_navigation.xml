@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_edit"
+        android:icon="@drawable/ic_baseline_auto_fix_high_24"
+        android:title="Edit"/>
+    <item
+        android:id="@+id/navigation_favourite"
+        android:icon="@drawable/ic_baseline_favorite_border_24"
+        android:title="Favourite"/>
+    <item
+        android:id="@+id/navigation_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Share"/>
+    <item
+        android:id="@+id/navigation_copy"
+        android:icon="@drawable/ic_baseline_content_copy_24"
+        android:title="Copy"/>
+    <item
+        android:id="@+id/navigation_background"
+        android:icon="@drawable/ic_baseline_settings_cell_24"
+        android:title="Background"/>
+</menu>
