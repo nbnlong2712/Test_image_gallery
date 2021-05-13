@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DbAlbumImage extends SQLiteOpenHelper {
-    public static final String DbAlbumImage = "AlbumImage.db";
+    public static final String DbAlbumImage = "AlbumImage.db";   //tên database
 
     public DbAlbumImage(@Nullable Context context) {
         super(context, DbAlbumImage, null, 1);
@@ -16,7 +16,7 @@ public class DbAlbumImage extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table if not exists AlbumImage (_id integer primary key autoincrement, uuid, path)");
+        db.execSQL("create table if not exists AlbumImage (uuid, path)");  //tạo bảng tên AlbumImage chứa hai thuộc tính là uuid và path (path là đường dẫn của ảnh)
     }
 
     @Override

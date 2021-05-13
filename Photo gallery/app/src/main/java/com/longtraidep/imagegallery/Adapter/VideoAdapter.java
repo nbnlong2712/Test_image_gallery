@@ -82,6 +82,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoHolder>
             i.putExtra("size", mVideo.getSize()+"");
             i.putExtra("dateTime", strDate);
             i.putExtra("duration", mVideo.getDuration());
+            i.putExtra("thumb", mVideo.getThumb());
             mActivity.startActivity(i);
         }
     }

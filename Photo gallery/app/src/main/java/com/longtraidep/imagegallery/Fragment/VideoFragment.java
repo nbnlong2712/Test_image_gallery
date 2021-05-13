@@ -46,7 +46,6 @@ public class VideoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_video, container, false);
 
-        Log.i("ZOZOZO", "ZOZOZO");
         mRecyclerViewVideo = (RecyclerView) v.findViewById(R.id.rcv_video);
         mDateVideoAdapter = new DateVideoAdapter(getActivity());
 

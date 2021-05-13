@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DbAlbum extends SQLiteOpenHelper {
-    public static final String DbAlbum = "Album.db";
+    public static final String DbAlbum = "Album.db";    //Tên bảng
 
     public DbAlbum(@Nullable Context context) {
         super(context, DbAlbum, null, 1);
@@ -17,13 +17,13 @@ public class DbAlbum extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table if not exists Album (_id integer primary key autoincrement, uuid, name, password)");
+        db.execSQL("create table if not exists Album (_id integer primary key autoincrement, uuid, name, password)");    //Tạo bảng Album gồm 3 thuộc tính chính là uuid, name, passowrd
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
-    public Boolean insertData(String uuid, String name, String password)
+    public Boolean insertData(String uuid, String name, String password)   //hàm này dùng để insert một Album mới vào database
     {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

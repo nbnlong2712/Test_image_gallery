@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.UUID;
 
 public class Album {
-    private UUID mId;
-    private String mName;
+    private UUID mId;      // ID của album
+    private String mName;    // Tên của album
     private List<String> mPathImageList;
-    private String mPassword;
+    private String mPassword;  // Mật khẩu để truy cập vào album
 
     public Album() {
         this(UUID.randomUUID());

@@ -130,6 +130,8 @@ public class GalleryActivity extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case R.id.navigation_nguoi:
+                        Intent in = new Intent(GalleryActivity.this, FavoriteActivity.class);
+                        startActivity(in);
                         break;
                 }
                 return true;

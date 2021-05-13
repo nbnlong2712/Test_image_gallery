@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
 import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.longtraidep.imagegallery.Database.DbFavouriteImage;
 import com.longtraidep.imagegallery.GlideApp.GlideApp;
 import com.longtraidep.imagegallery.R;
 
@@ -40,11 +41,15 @@ public class FullScreenImageActivity extends AppCompatActivity {
     private String path = "";
     private ImageView mImageView;
     private Bitmap mBitmap;
+    private DbFavouriteImage mDbFavouriteImage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen_image);
+
+        mDbFavouriteImage = new DbFavouriteImage(FullScreenImageActivity.this);
+        mDbFavouriteImage.getWritableDatabase();
 
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.full_screen_navigation_image);
         mImageView = (ImageView) findViewById(R.id.full_screen_image);
@@ -105,6 +110,8 @@ public class FullScreenImageActivity extends AppCompatActivity {
                         startActivityForResult(dsPhotoEditorIntent, 200);
                         break;
                     case R.id.navigation_favourite:
+                        mDbFavouriteImage.insertData(path);
+                        Toast.makeText(getApplicationContext(), "Saved in Favourite Image!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.navigation_share:
                         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();

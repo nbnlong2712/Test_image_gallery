@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.longtraidep.imagegallery.Database.DbFavouriteVideo;
 import com.longtraidep.imagegallery.R;
 
 import java.io.File;
@@ -29,7 +30,8 @@ public class FullScreenVideoActivity extends AppCompatActivity {
     private ImageButton mBackButton;
     private MxVideoPlayerWidget mVideoView;
     private TextView mPathText, mSizeText, mDateText, mDurationText;
-    private String path = "";
+    private String path = "", thumb = "";
+    private DbFavouriteVideo mDbFavouriteVideo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,6 +46,8 @@ public class FullScreenVideoActivity extends AppCompatActivity {
         mSizeText = (TextView) findViewById(R.id.size_text);
         mDurationText = (TextView) findViewById(R.id.duration_text);
 
+        mDbFavouriteVideo = new DbFavouriteVideo(FullScreenVideoActivity.this);
+        mDbFavouriteVideo.getWritableDatabase();
 
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +61,7 @@ public class FullScreenVideoActivity extends AppCompatActivity {
         if(callingActivity != null)
         {
             path = callingActivity.getStringExtra("path");
+            thumb = callingActivity.getStringExtra("thumb");
             String size = callingActivity.getStringExtra("size");
             String date = callingActivity.getStringExtra("dateTime");
             String duration = callingActivity.getStringExtra("duration");
@@ -76,6 +81,8 @@ public class FullScreenVideoActivity extends AppCompatActivity {
 
                         break;
                     case R.id.navigation_favourite:
+                        mDbFavouriteVideo.insertData(thumb, path);
+                        Toast.makeText(getApplicationContext(), "Saved in Favourite Video!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.navigation_delete:
                         deleteImage(path);

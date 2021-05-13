@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class AlbumLab {
-    private static AlbumLab sAlbumLab;
+    private static AlbumLab sAlbumLab;     //
     private Context mContext;
     private SQLiteDatabase mDatabase;
 

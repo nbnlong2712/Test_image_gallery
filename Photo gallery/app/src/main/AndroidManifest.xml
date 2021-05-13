@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.longtraidep.imagegallery">
 
 
@@ -26,6 +27,13 @@
         <activity android:name=".Activity.GalleryActivity"/>
         <activity android:name=".Activity.SlideShowActivity"/>
         <activity android:name=".Activity.AlbumActivity"/>
+        <activity android:name=".Activity.ImageAlbumActivity"/>
+        <activity android:name=".Activity.FullScreenAlbumImageActivity"/>
+        <activity android:name=".Activity.FavoriteActivity"/>
+        <activity android:name=".Activity.FavouriteImageActivity"/>
+        <activity android:name=".Activity.FavouriteVideoActivity"/>
+        <activity android:name=".Activity.FullScreenFavorImageActivity"/>
+        <activity android:name=".Activity.FullScreenFavorVideoActivity"/>
         <activity android:name=".Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +41,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.CameraActivity"/>
+
         <activity android:name=".Activity.FullScreenImageActivity"/>
         <activity android:name=".Activity.FullScreenVideoActivity"/>
 

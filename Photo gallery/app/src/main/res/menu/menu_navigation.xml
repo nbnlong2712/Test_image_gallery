@@ -18,6 +18,6 @@
         android:title="Album"/>
     <item
         android:id="@+id/navigation_nguoi"
-        android:icon="@drawable/ic_baseline_face_24"
-        android:title="Người"/>
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Favourite"/>
 </menu>

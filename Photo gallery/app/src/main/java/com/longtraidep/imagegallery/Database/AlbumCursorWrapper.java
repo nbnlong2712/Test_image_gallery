@@ -13,6 +13,7 @@ public class AlbumCursorWrapper extends CursorWrapper {
         super(cursor);
     }
 
+    //Hàm dùng để lấy MỘT album từ database
     public Album getAlbum()
     {
         String uuid = getString(getColumnIndex("uuid"));
